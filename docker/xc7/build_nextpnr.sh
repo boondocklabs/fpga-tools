@@ -10,9 +10,9 @@ cmake -DARCH=xilinx -DUSE_OPENMP=ON -DBUILD_GUI=OFF ..
 make -j$(nproc)
 make install
 cp bbasm /usr/local/bin
-cp ../xilinx/constids.inc /usr/local/lib/
+cp ../xilinx/constids.inc /venv/lib/
 cp ../xilinx/constids.inc ../xilinx/python/* /venv/lib/python3.13/
-cp -r ../xilinx/external /usr/local/lib/external
+cp -r ../xilinx/external /venv/lib/external
 popd
 
 popd
