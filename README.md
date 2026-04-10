@@ -1,11 +1,19 @@
 ### FPGA Tools
 
-#### Build XC7 container
+#### Build base XC7 container
 
 Builds the base container with all dependencies, yosys and nextpnr-xilinx from git
 
 ```
 docker build -t xc7 docker/xc7
+```
+
+#### Build LiteX container
+
+Installs LiteX, and RISC-V compiler toolchains layered onto the xc7 base container
+
+```
+docker build -t xc7-litex docker/xc7-litex
 ```
 
 #### Start the container
